@@ -42,9 +42,9 @@ namespace DllControleDeVendas.Sistema.Negocio
             set { cli_CNPJCPF = value; }
         }
 
-        private string cli_dataCadastro;
+        private DateTime cli_dataCadastro;
 
-        public string DataCadastro
+        public DateTime DataCadastro
         {
             get { return cli_dataCadastro; }
             set { cli_dataCadastro = value; }
@@ -130,7 +130,7 @@ namespace DllControleDeVendas.Sistema.Negocio
         public void Gravar()
         {
             StringBuilder query = new StringBuilder();
-            query.Append("  INSERT INTO Produto");
+            query.Append("  INSERT INTO Cliente");
             query.Append("  (");
             query.Append("  CLI_NOMERAZAO,");
             query.Append("  CLI_CNPJCPF,");
