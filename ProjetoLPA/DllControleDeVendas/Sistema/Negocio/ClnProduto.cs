@@ -98,11 +98,11 @@ namespace DllControleDeVendas.Sistema.Negocio
         {
             StringBuilder query = new StringBuilder();
             query.Append("  SELECT PRO_ID as Codigo,");
-            query.Append("  SELECT CAT_ID as Codigo_Categoria,");
-            query.Append("  SELECT PRO_DESCRICAO as Descricao,");
-            query.Append("  SELECT PRO_QTDESTOQUE as Quantidade,");
-            query.Append("  SELECT PRO_VALOR as Valor,");
-            query.Append("  SELECT PRO_ATIVO as ATIVO,");
+            query.Append("  CAT_ID as Codigo_Categoria,");
+            query.Append("  PRO_DESCRICAO as Descricao,");
+            query.Append("  PRO_QTDESTOQUE as Quantidade,");
+            query.Append("  PRO_VALOR as Valor,");
+            query.Append("  PRO_ATIVO as ATIVO,");
             query.Append("  FROM Produto");
 
             if (!filtro.Equals(string.Empty))
@@ -117,6 +117,9 @@ namespace DllControleDeVendas.Sistema.Negocio
         {
             StringBuilder query = new StringBuilder();
             query.Append("  SELECT PRO_DESCRICAO");
+            query.Append("  PRO_QTDESTOQUE as Quantidade,");
+            query.Append("  PRO_VALOR as Valor,");
+            query.Append("  PRO_ATIVO as ATIVO,");
             query.Append("  FROM Produto");
             query.Append("  WHERE PRO_ID = " + codigo);
             return cldBancoDados.RetornaDataReader(query.ToString());

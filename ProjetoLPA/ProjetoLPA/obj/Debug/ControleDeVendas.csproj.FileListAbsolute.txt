@@ -18,3 +18,6 @@ C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\ProjetoLPA\Projet
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormConsulta.resources
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormMenu.resources
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormPedido.resources
+H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.exe.config
+H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.exe
+H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.pdb
