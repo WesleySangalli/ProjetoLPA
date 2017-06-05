@@ -79,5 +79,16 @@ namespace DllControleDeVendas.Sistema.Negocio
             cldBancoDados.ExecutaComando(query.ToString());
         }
 
+        public void Listar()
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("  SELECT PED_ID,");
+            query.Append("  PRO_ID,");
+            query.Append("  ITE_QTDE,");
+            query.Append("  ITE_VALOR,");
+            query.Append("  FROM Item");
+
+            cldBancoDados.RetornaDataSet(query.ToString());
+        }
     }
 }
