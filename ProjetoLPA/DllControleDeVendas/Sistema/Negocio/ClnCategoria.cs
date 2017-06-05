@@ -10,31 +10,32 @@ namespace DllControleDeVendas.Sistema.Negocio
 {
     class ClnCategoria
     {
-        private int _cat_ID;
+        private int cat_ID;
 
-        public int cat_ID
+        public int ID
         {
-            get { return _cat_ID; }
-            set { _cat_ID = value; }
+            get { return cat_ID; }
+            set { cat_ID = value; }
         }
 
-        private int _cat_Descricao;
+        private int cat_Descricao;
 
-        public int cat_Descricao
+        public int Descricao
         {
-            get { return _cat_Descricao; }
-            set { _cat_Descricao = value; }
+            get { return cat_Descricao; }
+            set { cat_Descricao = value; }
         }
 
         private CldBancoDados cldBancoDados = new CldBancoDados();
 
-        public void Alterar()
+        public void Alterar(int codigo)
         {
             StringBuilder query = new StringBuilder();
             query.Append("  UPDATE Categoria");
             query.Append("  SET");
-            query.Append("  CAT_DESCRICAO = '" + cat_Descricao + "'");
-            query.Append("  CAT_ID = " + cat_ID);
+            query.Append("  CAT_DESCRICAO = '" + cat_Descricao + "',");
+            query.Append("  CAT_ID = " + cat_ID + ",");
+            query.Append("  WHERE CAT_ID = " + codigo);
             cldBancoDados.ExecutaComando(query.ToString());
         }
 
