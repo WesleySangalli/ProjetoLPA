@@ -48,10 +48,13 @@
     </Compile>
     <Compile Include="Sistema\Globais\CldBancoDados.cs" />
     <Compile Include="Sistema\Globais\ClnFuncoesGerais.cs" />
+    <Compile Include="Sistema\Negocio\ClnCategoria.cs" />
+    <Compile Include="Sistema\Negocio\ClnCliente.cs" />
+    <Compile Include="Sistema\Negocio\ClnItem.cs" />
+    <Compile Include="Sistema\Negocio\ClnPedido.cs" />
+    <Compile Include="Sistema\Negocio\ClnProduto.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Sistema\Negocio\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

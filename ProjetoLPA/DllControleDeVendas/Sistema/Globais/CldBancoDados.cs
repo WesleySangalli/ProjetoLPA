@@ -10,7 +10,7 @@ namespace DllControleDeVendas.Sistema.Globais
 {
     class CldBancoDados
     {
-        string stringConexao = Properties.Settings.Default.Conexao;
+        string stringConexao = Properties.Settings.Default.Conexao2;
 
         private OleDbConnection AbreBanco()
         {
