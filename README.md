@@ -1,3 +1,3 @@
 # ProjetoLPA
 
-Projeto de programação avançado - 5º Semestre
+Projeto de programação avançada - 5º Semestre
