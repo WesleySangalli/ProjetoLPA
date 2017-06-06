@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DllControleDeVendas.Sistema.Globais
 {
-    class ClnFuncoesGerais
+    public class ClnFuncoesGerais
     {
-        public enum Operacoes
+        public enum Operacao
         {
             Inclusao, Alteracao
         }

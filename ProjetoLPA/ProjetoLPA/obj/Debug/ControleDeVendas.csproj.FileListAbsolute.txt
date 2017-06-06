@@ -21,3 +21,26 @@ C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\ProjetoLPA\Projet
 H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.exe.config
 H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.exe
 H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.pdb
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.exe.config
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.exe
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.pdb
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\bin\Debug\DllControleDeVendas.dll
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\bin\Debug\DllControleDeVendas.pdb
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\bin\Debug\DllControleDeVendas.dll.config
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ControleDeVendas.csprojResolveAssemblyReference.cache
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Categoria.FormCadastroCategoria.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Categoria.FormConsultaCategoria.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Cliente.FormCadastroCliente.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Cliente.FormConsultaCliente.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Produto.FormCadastroProduto.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Produto.FormConsultaProduto.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Modelos.FormModelo.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Modelos.FormModeloCadastro.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Modelos.FormModeloConsulta.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormConsulta.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormMenu.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormPedido.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Properties.Resources.resources
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ControleDeVendas.csproj.GenerateResource.Cache
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.exe
+C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.pdb

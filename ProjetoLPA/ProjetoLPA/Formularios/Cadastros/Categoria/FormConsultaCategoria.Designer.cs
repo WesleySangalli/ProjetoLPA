@@ -1,6 +1,8 @@
-﻿namespace ProjetoLPA.Formularios.Cadastros.Categoria
+﻿using ProjetoLPA.Formularios.Modelos;
+
+namespace ProjetoLPA.Formularios.Cadastros.Categoria
 {
-    partial class FormConsultaCategoria
+    partial class FormConsultaCategoria : Modelos.FormModeloConsulta
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -30,6 +32,18 @@
         {
             ((System.ComponentModel.ISupportInitialize)(this.errError)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // bntExcluir
+            // 
+            this.bntExcluir.Click += new System.EventHandler(this.bntExcluir_Click);
             // 
             // FormConsultaCategoria
             // 

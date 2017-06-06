@@ -19,5 +19,20 @@ namespace ProjetoLPA.Formularios.Cadastros.Categoria
         {
 
         }
+
+        private void bntExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,9 +36,7 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.bntExcluir = new System.Windows.Forms.Button();
-            this.bntSair = new System.Windows.Forms.Button();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errError)).BeginInit();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
@@ -84,12 +82,12 @@
             // 
             // dataGrid
             // 
+            this.dataGrid.AllowUserToAddRows = false;
+            this.dataGrid.AllowUserToDeleteRows = false;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Descricao});
             this.dataGrid.Location = new System.Drawing.Point(6, 80);
             this.dataGrid.Name = "dataGrid";
+            this.dataGrid.ReadOnly = true;
             this.dataGrid.Size = new System.Drawing.Size(492, 238);
             this.dataGrid.TabIndex = 1;
             this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
@@ -121,32 +119,21 @@
             this.bntExcluir.Text = "Excluir";
             this.bntExcluir.UseVisualStyleBackColor = true;
             // 
-            // bntSair
+            // btnSair
             // 
-            this.bntSair.Location = new System.Drawing.Point(169, 324);
-            this.bntSair.Name = "bntSair";
-            this.bntSair.Size = new System.Drawing.Size(75, 23);
-            this.bntSair.TabIndex = 5;
-            this.bntSair.Text = "Sair";
-            this.bntSair.UseVisualStyleBackColor = true;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 70;
-            // 
-            // Descricao
-            // 
-            this.Descricao.HeaderText = "Descrição";
-            this.Descricao.Name = "Descricao";
-            this.Descricao.Width = 378;
+            this.btnSair.Location = new System.Drawing.Point(169, 324);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 5;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // FormModeloConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(504, 361);
-            this.Controls.Add(this.bntSair);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.bntExcluir);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnNovo);
@@ -171,8 +158,6 @@
         public System.Windows.Forms.Button btnNovo;
         public System.Windows.Forms.Button btnAlterar;
         public System.Windows.Forms.Button bntExcluir;
-        private System.Windows.Forms.Button bntSair;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descricao;
+        public System.Windows.Forms.Button btnSair;
     }
 }

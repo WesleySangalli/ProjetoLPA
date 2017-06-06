@@ -69,12 +69,13 @@ namespace DllControleDeVendas.Sistema.Negocio
             query.Append("  ITE_QTDE,");
             query.Append("  ITE_VALOR,");
 
-            query.Append("  )VALUES(");
+            query.Append("  ) VALUES (");
 
-            query.Append("  ," + clnPedido.ID);
-            query.Append("  ," + clnProduto.ID);
-            query.Append("  ," + ite_Qtde);
-            query.Append("  ," + ite_Valor);
+            query.Append("  " + clnPedido.ID);
+            query.Append("  , " + clnProduto.ID);
+            query.Append("  , " + ite_Qtde);
+            query.Append("  , " + ite_Valor);
+            query.Append(")");
 
             cldBancoDados.ExecutaComando(query.ToString());
         }

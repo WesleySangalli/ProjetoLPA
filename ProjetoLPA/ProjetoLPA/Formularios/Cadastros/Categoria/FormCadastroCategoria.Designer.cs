@@ -39,9 +39,9 @@
             this.groupCampos.Controls.Add(this.txtNome);
             this.groupCampos.Controls.Add(this.lblNome);
             // 
-            // btnNovo
+            // btnSair
             // 
-            this.btnNovo.Text = "Gravar";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // lblNome
             // 

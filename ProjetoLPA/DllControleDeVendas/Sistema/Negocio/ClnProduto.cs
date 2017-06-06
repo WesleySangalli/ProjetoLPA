@@ -90,7 +90,7 @@ namespace DllControleDeVendas.Sistema.Negocio
             query.Append("  INSERT INTO Produto");
             query.Append("  (CAT_ID, PRO_DESCRICAO, PRO_QTDESTOQUE, PRO_VALOR, PRO_ATIVO)");
             query.Append("  VALUES");
-            query.Append("  (" + clnCategoria.ID + "," + pro_Descricao + "," + pro_QtdEstoque + ", " + pro_Valor + "," + pro_Ativo + ")");
+            query.Append("  (" + clnCategoria.ID + ",'" + pro_Descricao + "', " + pro_QtdEstoque + ", " + pro_Valor + "," + pro_Ativo + ")");
             cldBancoDados.ExecutaComando(query.ToString());
         }
 

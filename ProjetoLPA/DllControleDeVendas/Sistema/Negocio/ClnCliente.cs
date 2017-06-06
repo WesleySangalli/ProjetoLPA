@@ -1,6 +1,7 @@
 ﻿using DllControleDeVendas.Sistema.Globais;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DllControleDeVendas.Sistema.Negocio
 {
-    class ClnCliente
+    public class ClnCliente
     {
         private string cli_Bairro;
 
@@ -100,30 +101,29 @@ namespace DllControleDeVendas.Sistema.Negocio
 
         private CldBancoDados cldBancoDados = new CldBancoDados();
 
-        public void Alterar(int codigo)
+        public void Alterar()
         {
             StringBuilder query = new StringBuilder();
             query.Append("  UPDATE Cliente");
             query.Append("  SET");
-            query.Append("  CLI_NOMERAZAO = " + cli_nome + ",");
-            query.Append("  CLI_CNPJCPF = " + cli_CNPJCPF + ",");
-            query.Append("  CLI_LOGRADOURO = " + cli_Logradouro + ",");
-            query.Append("  CLI_BAIRRO = " + cli_Bairro + ",");
-            query.Append("  CLI_CIDADE = " + cli_Cidade + ",");
-            query.Append("  CLI_UF = " + cli_UF + ",");
-            query.Append("  CLI_CEP = " + cli_Cep + ",");
-            query.Append("  CLI_EMAIL = " + cli_Email + ",");
-            query.Append("  CLI_FONES = " + cli_Fones + ",");
-            query.Append("  CLI_DATACADASTRO = " + cli_dataCadastro + ",");
-            query.Append("  WHERE PRO_ID=" + codigo);
+            query.Append("  CLI_NOMERAZAO = '" + cli_nome + "',");
+            query.Append("  CLI_CNPJCPF = '" + cli_CNPJCPF + "',");
+            query.Append("  CLI_LOGRADOURO = '" + cli_Logradouro + "',");
+            query.Append("  CLI_BAIRRO = '" + cli_Bairro + "',");
+            query.Append("  CLI_CIDADE = '" + cli_Cidade + "',");
+            query.Append("  CLI_UF = '" + cli_UF + "',");
+            query.Append("  CLI_CEP = '" + cli_Cep + "',");
+            query.Append("  CLI_EMAIL = '" + cli_Email + "',");
+            query.Append("  CLI_FONES = '" + cli_Fones + "',");
+            query.Append("  CLI_DATACADASTRO = '" + cli_dataCadastro + "'");
+            query.Append("  WHERE CLI_ID=" + cli_ID);
             cldBancoDados.ExecutaComando(query.ToString());
         }
 
         public void Excluir(int codigo)
         {
             StringBuilder query = new StringBuilder();
-            query.Append("  DELETE FROM Cliente");
-            query.Append("  WHERE PRO_ID = " + cli_ID);
+            query.Append("  DELETE FROM Cliente WHERE CLI_ID = " + codigo);
             cldBancoDados.ExecutaComando(query.ToString());
         }
 
@@ -143,36 +143,29 @@ namespace DllControleDeVendas.Sistema.Negocio
             query.Append("  CLI_FONES,");
             query.Append("  CLI_DATACADASTRO");
 
-            query.Append("  )VALUES(");
+            query.Append("  ) VALUES (");
 
-            query.Append("  ," + cli_nome);
-            query.Append("  ," + cli_CNPJCPF);
-            query.Append("  ," + cli_Logradouro);
-            query.Append("  ," + cli_Bairro);
-            query.Append("  ," + cli_Cidade);
-            query.Append("  ," + cli_UF);
-            query.Append("  ," + cli_Cep);
-            query.Append("  ," + cli_Email);
-            query.Append("  ," + cli_Fones);
-            query.Append("  ," + cli_dataCadastro);
+            query.Append("  '" + cli_nome + "'");
+            query.Append("  , '" + cli_CNPJCPF + "'");
+            query.Append("  , '" + cli_Logradouro + "'");
+            query.Append("  , '" + cli_Bairro + "'");
+            query.Append("  , '" + cli_Cidade + "'");
+            query.Append("  , '" + cli_UF + "'");
+            query.Append("  , '" + cli_Cep + "'");
+            query.Append("  , '" + cli_Email + "'");
+            query.Append("  , '" + cli_Fones + "'");
+            query.Append("  , '" + cli_dataCadastro + "'");
+            query.Append(")");
 
             cldBancoDados.ExecutaComando(query.ToString());
         }
 
-        public void Listar(string filtro)
+        public DataSet Listar(string filtro)
         {
             StringBuilder query = new StringBuilder();
             query.Append("  SELECT CLI_ID as Codigo,");
-            query.Append("  CLI_NOMERAZAO as NOMERAZAO,");
-            query.Append("  CLI_CNPJCPF as CNPJCPF,");
-            query.Append("  CLI_LOGRADOURO as LOGRADOURO,");
-            query.Append("  CLI_BAIRRO as BAIRRO,");
-            query.Append("  CLI_CIDADE as CIDADE,");
-            query.Append("  CLI_UF as UF,");
-            query.Append("  CLI_CEP as CEP,");
-            query.Append("  CLI_EMAIL as EMAIL,");
-            query.Append("  CLI_FONES as FONES,");
-            query.Append("  CLI_DATACADASTRO as DATACADASTRO,");
+            query.Append("  CLI_NOMERAZAO as Nome,");
+            query.Append("  CLI_CNPJCPF as CPF");
             query.Append("  FROM Cliente");
 
             if (!filtro.Equals(string.Empty))
@@ -180,18 +173,35 @@ namespace DllControleDeVendas.Sistema.Negocio
                 query.Append("  WHERE CLI_NOMERAZAO like '%" + filtro + "%'");
             }
 
-            cldBancoDados.RetornaDataSet(query.ToString());
+            return cldBancoDados.RetornaDataSet(query.ToString());
         }
 
 
         public OleDbDataReader ListarCliente(int codigo)
         {
             StringBuilder query = new StringBuilder();
-            query.Append("  SELECT CLI_NOMERAZAO");
-            query.Append("  CLI_CNPJCPF as CNPJCPF,");
-            query.Append("  FROM Produto");
-            query.Append("  WHERE PRO_ID = " + codigo);
-            return cldBancoDados.RetornaDataReader(query.ToString());
+            query.Append("  SELECT CLI_ID,");
+            query.Append("  CLI_NOMERAZAO,");
+            query.Append("  CLI_CNPJCPF,");
+            query.Append("  CLI_LOGRADOURO,");
+            query.Append("  CLI_BAIRRO,");
+            query.Append("  CLI_CIDADE,");
+            query.Append("  CLI_UF,");
+            query.Append("  CLI_CEP,");
+            query.Append("  CLI_EMAIL,");
+            query.Append("  CLI_FONES,");
+            query.Append("  CLI_DATACADASTRO");
+            query.Append("  FROM Cliente");
+            query.Append("  WHERE CLI_ID = " + codigo);
+
+            try
+            {
+                return cldBancoDados.RetornaDataReader(query.ToString());
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
     }
 }

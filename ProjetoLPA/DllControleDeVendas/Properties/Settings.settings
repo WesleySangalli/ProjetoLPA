@@ -5,16 +5,10 @@
     <Setting Name="Conexao" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=R2D2\SQLEXPRESS;Initial Catalog=ControleDeVendas;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ControleDeVendas.accdb"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=R2D2\SQLEXPRESS;Initial Catalog=ControleDeVendas;Integrated Security=True</Value>
-    </Setting>
-    <Setting Name="Conexao2" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=N776;Initial Catalog=ControleDeVendas;Integrated Security=True&lt;/ConnectionString&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=N776;Initial Catalog=ControleDeVendas;Integrated Security=True</Value>
+      <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source="C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ControleDeVendas.accdb"</Value>
     </Setting>
   </Settings>
 </SettingsFile>

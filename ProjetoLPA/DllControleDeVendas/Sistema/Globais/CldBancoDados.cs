@@ -10,7 +10,7 @@ namespace DllControleDeVendas.Sistema.Globais
 {
     class CldBancoDados
     {
-        string stringConexao = Properties.Settings.Default.Conexao2;
+        string stringConexao = Properties.Settings.Default.Conexao;
 
         private OleDbConnection AbreBanco()
         {
@@ -40,7 +40,8 @@ namespace DllControleDeVendas.Sistema.Globais
                 comando.CommandType = CommandType.Text;
                 comando.Connection = conexao;
                 comando.ExecuteNonQuery();
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 throw e;
             }
@@ -70,7 +71,8 @@ namespace DllControleDeVendas.Sistema.Globais
                 reader.Read();
 
                 return (int)reader[0];
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 throw e;
             }
@@ -92,13 +94,10 @@ namespace DllControleDeVendas.Sistema.Globais
                 comando.CommandType = CommandType.Text;
                 comando.Connection = conexao;
                 comando.ExecuteNonQuery();
-
-
-                OleDbDataAdapter adaptador = new OleDbDataAdapter();
-                // ACHO QUE FALTA ALGO AQUI!
+                
+                OleDbDataAdapter adaptador = new OleDbDataAdapter(query, conexao);                
                 DataSet dataSetRetorno = new DataSet();
-
-                // COM MAGICA??
+                                
                 adaptador.Fill(dataSetRetorno);
                 return dataSetRetorno;
             }
@@ -131,7 +130,7 @@ namespace DllControleDeVendas.Sistema.Globais
             }
             finally
             {
-                this.FechaBanco(conexao);
+                //this.FechaBanco(conexao);
             }
         }
     }

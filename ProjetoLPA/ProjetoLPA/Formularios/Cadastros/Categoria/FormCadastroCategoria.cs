@@ -14,5 +14,10 @@ namespace ProjetoLPA.Formularios.Cadastros.Categoria
         {
             InitializeComponent();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -19,5 +19,15 @@ namespace ProjetoLPA.Formularios.Cadastros.Produto
         {
 
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

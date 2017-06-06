@@ -61,12 +61,13 @@ namespace DllControleDeVendas.Sistema.Negocio
             query.Append("  PED_VALOR,");
             query.Append("  PED_STATUS,");
 
-            query.Append("  )VALUES(");
+            query.Append("  ) VALUES (");
 
-            query.Append("  ," + clnCliente.ID);
-            query.Append("  ," + ped_DtEncomenda);
-            query.Append("  ," + ped_Valor);
-            query.Append("  ," + ped_Status);
+            query.Append("  " + clnCliente.ID);
+            query.Append("  , '" + ped_DtEncomenda + "'");
+            query.Append("  , " + ped_Valor);
+            query.Append("  , '" + ped_Status);
+            query.Append(")");
 
             cldBancoDados.ExecutaComando(query.ToString());
         }
