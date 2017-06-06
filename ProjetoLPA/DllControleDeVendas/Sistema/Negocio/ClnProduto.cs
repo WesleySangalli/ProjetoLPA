@@ -1,6 +1,7 @@
 ﻿using DllControleDeVendas.Sistema.Globais;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DllControleDeVendas.Sistema.Negocio
 {
-    class ClnProduto
+    public class ClnProduto
     {
         private ClnCategoria clnCategoria;
 
@@ -60,7 +61,7 @@ namespace DllControleDeVendas.Sistema.Negocio
 
         private CldBancoDados cldBancoDados = new CldBancoDados();
 
-        public void Alterar(int codigo)
+        public void Alterar()
         {
             StringBuilder query = new StringBuilder();
             query.Append("  UPDATE Produto");
@@ -70,7 +71,7 @@ namespace DllControleDeVendas.Sistema.Negocio
             query.Append("  PRO_QTDESTOQUE = " + pro_QtdEstoque + ",");
             query.Append("  PRO_VALOR = " + pro_Valor + ",");
             query.Append("  PRO_ATIVO = " + pro_Ativo);
-            query.Append("  WHERE PRO_ID=" + codigo);
+            query.Append("  WHERE PRO_ID=" + pro_ID);
             cldBancoDados.ExecutaComando(query.ToString());
         }
 
@@ -94,15 +95,13 @@ namespace DllControleDeVendas.Sistema.Negocio
             cldBancoDados.ExecutaComando(query.ToString());
         }
 
-        public void Listar(string filtro)
+        public DataSet Listar(string filtro)
         {
             StringBuilder query = new StringBuilder();
             query.Append("  SELECT PRO_ID as Codigo,");
-            query.Append("  CAT_ID as Codigo_Categoria,");
             query.Append("  PRO_DESCRICAO as Descricao,");
             query.Append("  PRO_QTDESTOQUE as Quantidade,");
-            query.Append("  PRO_VALOR as Valor,");
-            query.Append("  PRO_ATIVO as ATIVO,");
+            query.Append("  PRO_ATIVO as ATIVO");
             query.Append("  FROM Produto");
 
             if (!filtro.Equals(string.Empty))
@@ -110,16 +109,18 @@ namespace DllControleDeVendas.Sistema.Negocio
                 query.Append("  WHERE PRO_DESCRICAO like '%" + filtro + "%'");
             }
 
-            cldBancoDados.RetornaDataSet(query.ToString());
+            return cldBancoDados.RetornaDataSet(query.ToString());
         }
 
         public OleDbDataReader ListarProduto(int codigo)
         {
             StringBuilder query = new StringBuilder();
-            query.Append("  SELECT PRO_DESCRICAO");
-            query.Append("  PRO_QTDESTOQUE as Quantidade,");
-            query.Append("  PRO_VALOR as Valor,");
-            query.Append("  PRO_ATIVO as ATIVO,");
+            query.Append("  SELECT PRO_ID,");
+            query.Append("  CAT_ID,");
+            query.Append("  PRO_DESCRICAO,");
+            query.Append("  PRO_QTDESTOQUE,");
+            query.Append("  PRO_VALOR,");
+            query.Append("  PRO_ATIVO");
             query.Append("  FROM Produto");
             query.Append("  WHERE PRO_ID = " + codigo);
             return cldBancoDados.RetornaDataReader(query.ToString());

@@ -12,9 +12,11 @@ namespace ProjetoLPA.Formularios.Cadastros.Cliente
 {
     public partial class FormConsultaCliente : ProjetoLPA.Formularios.Modelos.FormModeloConsulta
     {
+
         public FormConsultaCliente()
         {
             InitializeComponent();
+            CarregaGrid();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)

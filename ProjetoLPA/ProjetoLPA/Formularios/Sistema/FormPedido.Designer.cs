@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.groupPedido = new System.Windows.Forms.GroupBox();
-            this.lblCliente = new System.Windows.Forms.Label();
-            this.txtCliente = new System.Windows.Forms.TextBox();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.lblData = new System.Windows.Forms.Label();
+            this.btnAdcionarCliente = new System.Windows.Forms.Button();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
-            this.btnAdcionar = new System.Windows.Forms.Button();
+            this.lblData = new System.Windows.Forms.Label();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.groupItem = new System.Windows.Forms.GroupBox();
-            this.lblProduto = new System.Windows.Forms.Label();
-            this.txtPedido = new System.Windows.Forms.TextBox();
-            this.btnBuscarProduto = new System.Windows.Forms.Button();
-            this.lblQuantidade = new System.Windows.Forms.Label();
-            this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.lblValor = new System.Windows.Forms.Label();
-            this.txtValor = new System.Windows.Forms.TextBox();
-            this.btnAdicionar = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
             this.gridItem = new System.Windows.Forms.DataGridView();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.btnAdicionarItem = new System.Windows.Forms.Button();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.lblValor = new System.Windows.Forms.Label();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.btnBuscarProduto = new System.Windows.Forms.Button();
+            this.txtProduto = new System.Windows.Forms.TextBox();
+            this.lblProduto = new System.Windows.Forms.Label();
             this.groupCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errError)).BeginInit();
             this.groupPedido.SuspendLayout();
@@ -70,7 +70,7 @@
             // 
             // groupPedido
             // 
-            this.groupPedido.Controls.Add(this.btnAdcionar);
+            this.groupPedido.Controls.Add(this.btnAdcionarCliente);
             this.groupPedido.Controls.Add(this.dtpData);
             this.groupPedido.Controls.Add(this.lblData);
             this.groupPedido.Controls.Add(this.btnBuscarCliente);
@@ -83,40 +83,15 @@
             this.groupPedido.TabStop = false;
             this.groupPedido.Text = "Pedido";
             // 
-            // lblCliente
+            // btnAdcionarCliente
             // 
-            this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(6, 30);
-            this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(42, 13);
-            this.lblCliente.TabIndex = 0;
-            this.lblCliente.Text = "Cliente:";
-            // 
-            // txtCliente
-            // 
-            this.txtCliente.Location = new System.Drawing.Point(54, 27);
-            this.txtCliente.Name = "txtCliente";
-            this.txtCliente.ReadOnly = true;
-            this.txtCliente.Size = new System.Drawing.Size(425, 20);
-            this.txtCliente.TabIndex = 1;
-            // 
-            // btnBuscarCliente
-            // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(486, 25);
-            this.btnBuscarCliente.Name = "btnBuscarCliente";
-            this.btnBuscarCliente.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarCliente.TabIndex = 2;
-            this.btnBuscarCliente.Text = "Buscar";
-            this.btnBuscarCliente.UseVisualStyleBackColor = true;
-            // 
-            // lblData
-            // 
-            this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(15, 61);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(33, 13);
-            this.lblData.TabIndex = 3;
-            this.lblData.Text = "Data:";
+            this.btnAdcionarCliente.Location = new System.Drawing.Point(6, 93);
+            this.btnAdcionarCliente.Name = "btnAdcionarCliente";
+            this.btnAdcionarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnAdcionarCliente.TabIndex = 5;
+            this.btnAdcionarCliente.Text = "Adicionar";
+            this.btnAdcionarCliente.UseVisualStyleBackColor = true;
+            this.btnAdcionarCliente.Click += new System.EventHandler(this.btnAdcionar_Click);
             // 
             // dtpData
             // 
@@ -127,26 +102,53 @@
             this.dtpData.Size = new System.Drawing.Size(111, 20);
             this.dtpData.TabIndex = 4;
             // 
-            // btnAdcionar
+            // lblData
             // 
-            this.btnAdcionar.Location = new System.Drawing.Point(6, 93);
-            this.btnAdcionar.Name = "btnAdcionar";
-            this.btnAdcionar.Size = new System.Drawing.Size(75, 23);
-            this.btnAdcionar.TabIndex = 5;
-            this.btnAdcionar.Text = "Adicionar";
-            this.btnAdcionar.UseVisualStyleBackColor = true;
+            this.lblData.AutoSize = true;
+            this.lblData.Location = new System.Drawing.Point(15, 61);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(33, 13);
+            this.lblData.TabIndex = 3;
+            this.lblData.Text = "Data:";
+            // 
+            // btnBuscarCliente
+            // 
+            this.btnBuscarCliente.Location = new System.Drawing.Point(486, 25);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarCliente.TabIndex = 2;
+            this.btnBuscarCliente.Text = "Buscar";
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+            // 
+            // txtCliente
+            // 
+            this.txtCliente.Location = new System.Drawing.Point(54, 27);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.ReadOnly = true;
+            this.txtCliente.Size = new System.Drawing.Size(425, 20);
+            this.txtCliente.TabIndex = 1;
+            // 
+            // lblCliente
+            // 
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Location = new System.Drawing.Point(6, 30);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(42, 13);
+            this.lblCliente.TabIndex = 0;
+            this.lblCliente.Text = "Cliente:";
             // 
             // groupItem
             // 
             this.groupItem.Controls.Add(this.gridItem);
             this.groupItem.Controls.Add(this.btnRemover);
-            this.groupItem.Controls.Add(this.btnAdicionar);
+            this.groupItem.Controls.Add(this.btnAdicionarItem);
             this.groupItem.Controls.Add(this.txtValor);
             this.groupItem.Controls.Add(this.lblValor);
             this.groupItem.Controls.Add(this.txtQuantidade);
             this.groupItem.Controls.Add(this.lblQuantidade);
             this.groupItem.Controls.Add(this.btnBuscarProduto);
-            this.groupItem.Controls.Add(this.txtPedido);
+            this.groupItem.Controls.Add(this.txtProduto);
             this.groupItem.Controls.Add(this.lblProduto);
             this.groupItem.Location = new System.Drawing.Point(7, 150);
             this.groupItem.Name = "groupItem";
@@ -155,48 +157,41 @@
             this.groupItem.TabStop = false;
             this.groupItem.Text = "Item";
             // 
-            // lblProduto
+            // gridItem
             // 
-            this.lblProduto.AutoSize = true;
-            this.lblProduto.Location = new System.Drawing.Point(6, 25);
-            this.lblProduto.Name = "lblProduto";
-            this.lblProduto.Size = new System.Drawing.Size(47, 13);
-            this.lblProduto.TabIndex = 0;
-            this.lblProduto.Text = "Produto:";
+            this.gridItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridItem.Location = new System.Drawing.Point(6, 84);
+            this.gridItem.Name = "gridItem";
+            this.gridItem.Size = new System.Drawing.Size(567, 178);
+            this.gridItem.TabIndex = 9;
             // 
-            // txtPedido
+            // btnRemover
             // 
-            this.txtPedido.Location = new System.Drawing.Point(59, 22);
-            this.txtPedido.Name = "txtPedido";
-            this.txtPedido.ReadOnly = true;
-            this.txtPedido.Size = new System.Drawing.Size(411, 20);
-            this.txtPedido.TabIndex = 1;
+            this.btnRemover.Location = new System.Drawing.Point(426, 55);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(75, 23);
+            this.btnRemover.TabIndex = 8;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
-            // btnBuscarProduto
+            // btnAdicionarItem
             // 
-            this.btnBuscarProduto.Location = new System.Drawing.Point(477, 21);
-            this.btnBuscarProduto.Name = "btnBuscarProduto";
-            this.btnBuscarProduto.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarProduto.TabIndex = 2;
-            this.btnBuscarProduto.Text = "Buscar";
-            this.btnBuscarProduto.UseVisualStyleBackColor = true;
+            this.btnAdicionarItem.Location = new System.Drawing.Point(345, 55);
+            this.btnAdicionarItem.Name = "btnAdicionarItem";
+            this.btnAdicionarItem.Size = new System.Drawing.Size(75, 23);
+            this.btnAdicionarItem.TabIndex = 7;
+            this.btnAdicionarItem.Text = "Adicionar";
+            this.btnAdicionarItem.UseVisualStyleBackColor = true;
+            this.btnAdicionarItem.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
-            // lblQuantidade
+            // txtValor
             // 
-            this.lblQuantidade.AutoSize = true;
-            this.lblQuantidade.Location = new System.Drawing.Point(7, 58);
-            this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(65, 13);
-            this.lblQuantidade.TabIndex = 3;
-            this.lblQuantidade.Text = "Quantidade:";
-            // 
-            // txtQuantidade
-            // 
-            this.txtQuantidade.Location = new System.Drawing.Point(76, 55);
-            this.txtQuantidade.MaxLength = 5;
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantidade.TabIndex = 4;
+            this.txtValor.Location = new System.Drawing.Point(221, 55);
+            this.txtValor.MaxLength = 10;
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(100, 20);
+            this.txtValor.TabIndex = 6;
             // 
             // lblValor
             // 
@@ -207,39 +202,49 @@
             this.lblValor.TabIndex = 5;
             this.lblValor.Text = "Valor:";
             // 
-            // txtValor
+            // txtQuantidade
             // 
-            this.txtValor.Location = new System.Drawing.Point(221, 55);
-            this.txtValor.MaxLength = 10;
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(100, 20);
-            this.txtValor.TabIndex = 6;
+            this.txtQuantidade.Location = new System.Drawing.Point(76, 55);
+            this.txtQuantidade.MaxLength = 5;
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(100, 20);
+            this.txtQuantidade.TabIndex = 4;
             // 
-            // btnAdicionar
+            // lblQuantidade
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(345, 55);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
-            this.btnAdicionar.TabIndex = 7;
-            this.btnAdicionar.Text = "Adicionar";
-            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Location = new System.Drawing.Point(7, 58);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(65, 13);
+            this.lblQuantidade.TabIndex = 3;
+            this.lblQuantidade.Text = "Quantidade:";
             // 
-            // btnRemover
+            // btnBuscarProduto
             // 
-            this.btnRemover.Location = new System.Drawing.Point(426, 55);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(75, 23);
-            this.btnRemover.TabIndex = 8;
-            this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnBuscarProduto.Location = new System.Drawing.Point(477, 21);
+            this.btnBuscarProduto.Name = "btnBuscarProduto";
+            this.btnBuscarProduto.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarProduto.TabIndex = 2;
+            this.btnBuscarProduto.Text = "Buscar";
+            this.btnBuscarProduto.UseVisualStyleBackColor = true;
+            this.btnBuscarProduto.Click += new System.EventHandler(this.btnBuscarProduto_Click);
             // 
-            // gridItem
+            // txtProduto
             // 
-            this.gridItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridItem.Location = new System.Drawing.Point(6, 84);
-            this.gridItem.Name = "gridItem";
-            this.gridItem.Size = new System.Drawing.Size(567, 178);
-            this.gridItem.TabIndex = 9;
+            this.txtProduto.Location = new System.Drawing.Point(59, 22);
+            this.txtProduto.Name = "txtProduto";
+            this.txtProduto.ReadOnly = true;
+            this.txtProduto.Size = new System.Drawing.Size(411, 20);
+            this.txtProduto.TabIndex = 1;
+            // 
+            // lblProduto
+            // 
+            this.lblProduto.AutoSize = true;
+            this.lblProduto.Location = new System.Drawing.Point(6, 25);
+            this.lblProduto.Name = "lblProduto";
+            this.lblProduto.Size = new System.Drawing.Size(47, 13);
+            this.lblProduto.TabIndex = 0;
+            this.lblProduto.Text = "Produto:";
             // 
             // FormPedido
             // 
@@ -269,13 +274,13 @@
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.Button btnBuscarProduto;
-        private System.Windows.Forms.TextBox txtPedido;
+        private System.Windows.Forms.TextBox txtProduto;
         private System.Windows.Forms.Label lblProduto;
-        private System.Windows.Forms.Button btnAdcionar;
+        private System.Windows.Forms.Button btnAdcionarCliente;
         private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.DataGridView gridItem;
         private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.Button btnAdicionarItem;
     }
 }

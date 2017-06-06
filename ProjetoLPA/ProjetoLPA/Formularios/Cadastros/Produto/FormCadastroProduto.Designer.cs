@@ -58,7 +58,6 @@
             this.groupCampos.Controls.Add(this.lblDescricao);
             this.groupCampos.Controls.Add(this.lblCategoria);
             this.groupCampos.Location = new System.Drawing.Point(9, 11);
-            this.groupCampos.Enter += new System.EventHandler(this.groupCampos_Enter);
             // 
             // btnNovo
             // 
@@ -157,6 +156,7 @@
             this.optSim.TabStop = true;
             this.optSim.Text = "Sim";
             this.optSim.UseVisualStyleBackColor = true;
+            this.optSim.CheckedChanged += new System.EventHandler(this.optSim_CheckedChanged);
             // 
             // optNao
             // 
@@ -168,12 +168,14 @@
             this.optNao.TabStop = true;
             this.optNao.Text = "Não";
             this.optNao.UseVisualStyleBackColor = true;
+            this.optNao.CheckedChanged += new System.EventHandler(this.optNao_CheckedChanged);
             // 
             // FormCadastroProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(475, 347);
             this.Name = "FormCadastroProduto";
+            this.Load += new System.EventHandler(this.FormCadastroProduto_Load);
             this.groupCampos.ResumeLayout(false);
             this.groupCampos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errError)).EndInit();

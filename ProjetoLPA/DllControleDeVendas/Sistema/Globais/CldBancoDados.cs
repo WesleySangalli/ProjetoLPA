@@ -130,6 +130,7 @@ namespace DllControleDeVendas.Sistema.Globais
             }
             finally
             {
+                /*Fechar o banco causa uma exception no dataReader */
                 //this.FechaBanco(conexao);
             }
         }

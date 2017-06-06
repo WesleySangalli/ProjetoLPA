@@ -33,6 +33,10 @@ namespace ProjetoLPA.Formularios.Cadastros.Categoria
             ((System.ComponentModel.ISupportInitialize)(this.errError)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
             // btnNovo
             // 
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
@@ -44,6 +48,10 @@ namespace ProjetoLPA.Formularios.Cadastros.Categoria
             // bntExcluir
             // 
             this.bntExcluir.Click += new System.EventHandler(this.bntExcluir_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // FormConsultaCategoria
             // 

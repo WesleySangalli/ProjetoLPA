@@ -1,6 +1,7 @@
 ﻿using DllControleDeVendas.Sistema.Globais;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DllControleDeVendas.Sistema.Negocio
 {
-    class ClnCategoria
+    public class ClnCategoria
     {
         private int cat_ID;
 
@@ -18,9 +19,9 @@ namespace DllControleDeVendas.Sistema.Negocio
             set { cat_ID = value; }
         }
 
-        private int cat_Descricao;
+        private string cat_Descricao;
 
-        public int Descricao
+        public string Descricao
         {
             get { return cat_Descricao; }
             set { cat_Descricao = value; }
@@ -28,14 +29,14 @@ namespace DllControleDeVendas.Sistema.Negocio
 
         private CldBancoDados cldBancoDados = new CldBancoDados();
 
-        public void Alterar(int codigo)
+        public void Alterar()
         {
             StringBuilder query = new StringBuilder();
             query.Append("  UPDATE Categoria");
             query.Append("  SET");
             query.Append("  CAT_DESCRICAO = '" + cat_Descricao + "',");
-            query.Append("  CAT_ID = " + cat_ID + ",");
-            query.Append("  WHERE CAT_ID = " + codigo);
+            query.Append("  CAT_ID = " + cat_ID);
+            query.Append("  WHERE CAT_ID = " + cat_ID);
             cldBancoDados.ExecutaComando(query.ToString());
         }
 
@@ -60,18 +61,17 @@ namespace DllControleDeVendas.Sistema.Negocio
         }
 
 
-        public void Listar(string filtro)
+        public DataSet Listar(string filtro)
         {
             StringBuilder query = new StringBuilder();
             query.Append("  SELECT CAT_ID as Codigo, CAT_DESCRICAO as Descricao FROM Categoria");
-            query.Append("  FROM Categoria");
 
             if (!filtro.Equals(string.Empty))
             {
                 query.Append("  WHERE CAT_DESCRICAO like '%" + filtro + "%'");
             }
 
-            cldBancoDados.RetornaDataSet(query.ToString());
+            return cldBancoDados.RetornaDataSet(query.ToString());
         }
 
         public OleDbDataReader ListarCategoria(int codigo)

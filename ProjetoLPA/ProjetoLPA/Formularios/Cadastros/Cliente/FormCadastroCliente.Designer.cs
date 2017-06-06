@@ -31,7 +31,7 @@
             this.groupDadosCliente = new System.Windows.Forms.GroupBox();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblCpf = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.groupEndereco = new System.Windows.Forms.GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -73,7 +73,7 @@
             // 
             this.groupDadosCliente.Controls.Add(this.txtCpf);
             this.groupDadosCliente.Controls.Add(this.txtNome);
-            this.groupDadosCliente.Controls.Add(this.label1);
+            this.groupDadosCliente.Controls.Add(this.lblCpf);
             this.groupDadosCliente.Controls.Add(this.lblNome);
             this.groupDadosCliente.Location = new System.Drawing.Point(6, 19);
             this.groupDadosCliente.Name = "groupDadosCliente";
@@ -98,15 +98,14 @@
             this.txtNome.Size = new System.Drawing.Size(337, 20);
             this.txtNome.TabIndex = 2;
             // 
-            // label1
+            // lblCpf
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "CPF/CNPJ:";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.lblCpf.AutoSize = true;
+            this.lblCpf.Location = new System.Drawing.Point(7, 57);
+            this.lblCpf.Name = "lblCpf";
+            this.lblCpf.Size = new System.Drawing.Size(62, 13);
+            this.lblCpf.TabIndex = 1;
+            this.lblCpf.Text = "CPF/CNPJ:";
             // 
             // lblNome
             // 
@@ -282,7 +281,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupDadosCliente;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblCpf;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.GroupBox groupEndereco;
         private System.Windows.Forms.TextBox txtBairro;

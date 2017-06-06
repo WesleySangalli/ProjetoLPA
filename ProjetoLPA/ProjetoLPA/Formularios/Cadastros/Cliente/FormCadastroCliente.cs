@@ -18,22 +18,12 @@ namespace ProjetoLPA.Formularios.Cadastros.Cliente
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormCadastroCliente_Load(object sender, EventArgs e)
         {
             if (Operacao == ClnFuncoesGerais.Operacao.Alteracao)
             {
                 ClnCliente cliente = new ClnCliente();
-                OleDbDataReader dados = cliente.ListarCliente(Codigo);                
+                OleDbDataReader dados = cliente.ListarCliente(Codigo);
                 if (dados.HasRows)
                 {
                     dados.Read();
@@ -45,18 +35,21 @@ namespace ProjetoLPA.Formularios.Cadastros.Cliente
                     comboUf.Text = dados["CLI_UF"].ToString();
                     txtCep.Text = dados["CLI_CEP"].ToString();
                     txtEmail.Text = dados["CLI_EMAIL"].ToString();
-                    txtTelefone.Text = dados["CLI_FONES"].ToString();                    
+                    txtTelefone.Text = dados["CLI_FONES"].ToString();
                 }
             }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-
+            // Herdado
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
+
+            /*Eu confio no usuário! rs*/
+
             ClnCliente cliente = new ClnCliente();
             cliente.Bairro = txtBairro.Text;
             cliente.CEP = txtCep.Text;

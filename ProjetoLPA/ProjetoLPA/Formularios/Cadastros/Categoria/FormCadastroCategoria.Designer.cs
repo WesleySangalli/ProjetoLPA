@@ -39,6 +39,10 @@
             this.groupCampos.Controls.Add(this.txtNome);
             this.groupCampos.Controls.Add(this.lblNome);
             // 
+            // btnNovo
+            // 
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // btnSair
             // 
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -65,6 +69,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(475, 347);
             this.Name = "FormCadastroCategoria";
+            this.Load += new System.EventHandler(this.FormCadastroCategoria_Load);
             this.groupCampos.ResumeLayout(false);
             this.groupCampos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errError)).EndInit();

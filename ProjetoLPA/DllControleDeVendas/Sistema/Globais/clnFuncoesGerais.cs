@@ -13,5 +13,9 @@ namespace DllControleDeVendas.Sistema.Globais
             Inclusao, Alteracao
         }
 
-    }
+        public enum TipoConsulta
+        {
+            Cliente, Produto
+        }
+    }      
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DllControleDeVendas.Sistema.Negocio
 {
-    class ClnItem
+    public class ClnItem
     {
         private ClnPedido clnPedido;
 
