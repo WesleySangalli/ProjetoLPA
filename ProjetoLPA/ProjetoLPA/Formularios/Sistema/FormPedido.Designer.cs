@@ -63,6 +63,7 @@
             // btnNovo
             // 
             this.btnNovo.Location = new System.Drawing.Point(528, 461);
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSair
             // 

@@ -79,5 +79,36 @@ namespace ProjetoLPA.Formularios.Sistema
             int pos = (int)gridItem.CurrentRow.Cells[0].Value;
             items.RemoveAt(pos);
         }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            if (codigoCliente == 0 && descricaoCliente == null)
+            {
+                MessageBox.Show("Seleciona um cliente", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            if (items.Count == 0)
+            {
+                MessageBox.Show("Seleciona ao menos um produto", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            ClnPedido pedido = new ClnPedido();
+
+            ClnCliente cliente = new ClnCliente();
+            cliente.ID = codigoCliente;
+            pedido.Cliente = cliente;
+
+            pedido.DtEncomenda = DateTime.Now;
+            pedido.Status = 1;
+
+            double valor = 0;
+            foreach (ClnItem item in items)
+            {
+                valor += item.Valor;
+            }
+
+            pedido.Valor = valor;
+            pedido.Gravar();
+        }
     }
 }
