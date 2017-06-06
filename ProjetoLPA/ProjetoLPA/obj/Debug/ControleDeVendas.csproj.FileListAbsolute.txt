@@ -18,9 +18,6 @@ C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\ProjetoLPA\Projet
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormConsulta.resources
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormMenu.resources
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormPedido.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.exe.config
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.exe
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.pdb
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.exe.config
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.exe
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.pdb
@@ -44,22 +41,3 @@ C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\Projet
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ControleDeVendas.csproj.GenerateResource.Cache
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.exe
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.pdb
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ControleDeVendas.csprojResolveAssemblyReference.cache
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Categoria.FormCadastroCategoria.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Categoria.FormConsultaCategoria.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Cliente.FormCadastroCliente.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Cliente.FormConsultaCliente.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Produto.FormCadastroProduto.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Cadastros.Produto.FormConsultaProduto.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Modelos.FormModelo.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Modelos.FormModeloCadastro.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Modelos.FormModeloConsulta.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormConsulta.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormMenu.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Formularios.Sistema.FormPedido.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ProjetoLPA.Properties.Resources.resources
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\obj\Debug\ControleDeVendas.csproj.GenerateResource.Cache
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.exe
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\bin\Debug\ProjetoLPA.pdb
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\bin\Debug\DllControleDeVendas.dll
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\ProjetoLPA\bin\Debug\DllControleDeVendas.pdb

@@ -15,6 +15,7 @@ namespace ProjetoLPA.Formularios.Cadastros.Produto
         public FormConsultaProduto()
         {
             InitializeComponent();
+            CarregaGrid();
         }
 
         private void btnSair_Click(object sender, EventArgs e)

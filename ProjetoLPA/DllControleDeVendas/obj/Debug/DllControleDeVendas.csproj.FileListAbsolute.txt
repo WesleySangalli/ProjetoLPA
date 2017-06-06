@@ -4,9 +4,3 @@ C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\Projet
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\DllControleDeVendas\obj\Debug\DllControleDeVendas.csprojResolveAssemblyReference.cache
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\DllControleDeVendas\obj\Debug\DllControleDeVendas.dll
 C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\DllControleDeVendas\obj\Debug\DllControleDeVendas.pdb
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\DllControleDeVendas\bin\Debug\DllControleDeVendas.dll.config
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\DllControleDeVendas\bin\Debug\DllControleDeVendas.dll
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\DllControleDeVendas\bin\Debug\DllControleDeVendas.pdb
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\DllControleDeVendas\obj\Debug\DllControleDeVendas.csprojResolveAssemblyReference.cache
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\DllControleDeVendas\obj\Debug\DllControleDeVendas.dll
-H:\Estudos\projeto-lpa\ProjetoLPA\ProjetoLPA\ProjetoLPA\DllControleDeVendas\obj\Debug\DllControleDeVendas.pdb
