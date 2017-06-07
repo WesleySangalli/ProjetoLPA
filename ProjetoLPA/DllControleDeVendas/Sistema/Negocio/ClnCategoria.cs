@@ -82,5 +82,13 @@ namespace DllControleDeVendas.Sistema.Negocio
             query.Append("  WHERE CAT_ID = " + codigo);
             return cldBancoDados.RetornaDataReader(query.ToString());
         }
+
+        public OleDbDataReader ListarCategorias()
+        {
+            StringBuilder query = new StringBuilder();
+            query.Append("  SELECT CAT_DESCRICAO, CAT_ID");
+            query.Append("  FROM Categoria");            
+            return cldBancoDados.RetornaDataReader(query.ToString());
+        }
     }
 }

@@ -2,11 +2,6 @@
 using ProjetoLPA.Formularios.Cadastros.Cliente;
 using ProjetoLPA.Formularios.Cadastros.Produto;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ProjetoLPA.Formularios.Sistema
@@ -20,12 +15,12 @@ namespace ProjetoLPA.Formularios.Sistema
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Sistema de Vendas v1.0", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormConsultaCliente form =  new FormConsultaCliente();
+            FormConsultaCliente form = new FormConsultaCliente();
             form.ShowDialog();
         }
 

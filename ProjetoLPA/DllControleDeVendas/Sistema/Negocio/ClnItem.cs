@@ -62,12 +62,12 @@ namespace DllControleDeVendas.Sistema.Negocio
         public void Gravar()
         {
             StringBuilder query = new StringBuilder();
-            query.Append("  INSERT INTO Produto");
+            query.Append("  INSERT INTO Item");
             query.Append("  (");
             query.Append("  PED_ID,");
             query.Append("  PRO_ID,");
             query.Append("  ITE_QTDE,");
-            query.Append("  ITE_VALOR,");
+            query.Append("  ITE_VALOR");
 
             query.Append("  ) VALUES (");
 

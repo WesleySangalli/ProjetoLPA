@@ -3,6 +3,7 @@ using DllControleDeVendas.Sistema.Negocio;
 using System;
 using System.Data;
 using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace ProjetoLPA.Formularios.Cadastros.Produto
 {
@@ -25,6 +26,7 @@ namespace ProjetoLPA.Formularios.Cadastros.Produto
             produto.Ativo = optSim.Checked;
             produto.Categoria = (ClnCategoria)comboCategoria.SelectedItem;
             produto.Descricao = txtDescricao.Text;
+            produto.QtdEstoque = int.Parse(nudQuantidade.Value.ToString());
             produto.Valor = double.Parse(txtValor.Text);
 
             if (Operacao == ClnFuncoesGerais.Operacao.Inclusao)
@@ -36,6 +38,9 @@ namespace ProjetoLPA.Formularios.Cadastros.Produto
                 produto.ID = Codigo;
                 produto.Alterar();
             }
+
+            MessageBox.Show("Registro gravado com sucesso", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void optSim_CheckedChanged(object sender, EventArgs e)
@@ -66,18 +71,29 @@ namespace ProjetoLPA.Formularios.Cadastros.Produto
                 {
                     dados.Read();
 
-                    ClnCategoria categoria = new ClnCategoria();
-                    OleDbDataReader categorias = categoria.ListarCategoria(int.Parse(dados["CAT_ID"].ToString()));
-                    if (categorias.HasRows)
+
+                    foreach (ClnCategoria c in comboCategoria.Items)
                     {
-                        categorias.Read();
-                        categoria.Descricao = categorias["CAT_DESCRICAO"].ToString();
+                        if (c.ID == int.Parse(dados["CAT_ID"].ToString()))
+                        {
+                            comboCategoria.SelectedItem = c;
+                            break;
+                        }
+
                     }
-                    comboCategoria.SelectedItem = categoria;
-                    produto.Ativo = bool.Parse(dados["PRO_ATIVO"].ToString());
-                    produto.Descricao = dados["PRO_DESCRICAO"].ToString();
-                    produto.QtdEstoque = int.Parse(dados["PRO_QTDESTOQUE"].ToString());
-                    produto.Valor = double.Parse(dados["PRO_VALOR"].ToString());
+                    if (bool.Parse(dados["PRO_ATIVO"].ToString()))
+                    {
+                        optSim.Checked = true;
+                        optNao.Checked = false;
+                    }
+                    else
+                    {
+                        optNao.Checked = true;
+                        optSim.Checked = false;
+                    }
+                    txtDescricao.Text = dados["PRO_DESCRICAO"].ToString();
+                    nudQuantidade.Value = int.Parse(dados["PRO_QTDESTOQUE"].ToString());
+                    txtValor.Text = dados["PRO_VALOR"].ToString();
                 }
             }
         }
@@ -85,7 +101,17 @@ namespace ProjetoLPA.Formularios.Cadastros.Produto
         private void CarregaComboCategoria()
         {
             ClnCategoria categoria = new ClnCategoria();
-            comboCategoria.DataSource = categoria.Listar("");
+            OleDbDataReader categorias = categoria.ListarCategorias();
+
+            while (categorias.Read())
+            {
+                ClnCategoria cat = new ClnCategoria();
+                cat.Descricao = categorias["CAT_DESCRICAO"].ToString();
+                cat.ID = int.Parse(categorias["CAT_ID"].ToString());
+                comboCategoria.Items.Add(cat);
+            }
+
+            comboCategoria.DisplayMember = "Descricao";
         }
     }
 }

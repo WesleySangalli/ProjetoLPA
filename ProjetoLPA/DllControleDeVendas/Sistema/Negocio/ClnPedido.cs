@@ -51,10 +51,10 @@ namespace DllControleDeVendas.Sistema.Negocio
 
         private CldBancoDados cldBancoDados = new CldBancoDados();
 
-        public void Gravar()
+        public int Gravar()
         {
             StringBuilder query = new StringBuilder();
-            query.Append("  INSERT INTO Produto");
+            query.Append("  INSERT INTO Pedido");
             query.Append("  (");
             query.Append("  CLI_ID,");
             query.Append("  PED_DATAENCOMENDA,");
@@ -69,7 +69,7 @@ namespace DllControleDeVendas.Sistema.Negocio
             query.Append("  , '" + ped_Status + "'");
             query.Append(")");
 
-            cldBancoDados.ExecutaComando(query.ToString());
+            return cldBancoDados.ExecutaComandoRetorno(query.ToString());
         }
     }
 }

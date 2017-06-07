@@ -1,6 +1,0 @@
-C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\DllControleDeVendas\bin\Debug\DllControleDeVendas.dll.config
-C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\DllControleDeVendas\bin\Debug\DllControleDeVendas.dll
-C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\DllControleDeVendas\bin\Debug\DllControleDeVendas.pdb
-C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\DllControleDeVendas\obj\Debug\DllControleDeVendas.csprojResolveAssemblyReference.cache
-C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\DllControleDeVendas\obj\Debug\DllControleDeVendas.dll
-C:\Users\Wesley Sangalli\Documents\Visual Studio 2017\Projects\VERSIONADO\ProjetoLPA\DllControleDeVendas\obj\Debug\DllControleDeVendas.pdb

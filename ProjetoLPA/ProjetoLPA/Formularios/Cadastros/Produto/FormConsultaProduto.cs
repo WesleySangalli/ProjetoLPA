@@ -38,7 +38,7 @@ namespace ProjetoLPA.Formularios.Cadastros.Produto
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             FormCadastroProduto alteracao = new FormCadastroProduto();
-            alteracao.Operacao = ClnFuncoesGerais.Operacao.Inclusao;
+            alteracao.Operacao = ClnFuncoesGerais.Operacao.Alteracao;
             alteracao.Codigo = (int)dataGrid.CurrentRow.Cells[0].Value;
             alteracao.ShowDialog();
             CarregaGrid();            
@@ -59,8 +59,8 @@ namespace ProjetoLPA.Formularios.Cadastros.Produto
 
         private void CarregaGrid()
         {
-            ClnProduto cliente = new ClnProduto();
-            dataGrid.DataSource = cliente.Listar(txtDescricao.Text).Tables[0];
+            ClnProduto produto = new ClnProduto();
+            dataGrid.DataSource = produto.Listar(txtDescricao.Text).Tables[0];
         }
     }
 }

@@ -41,16 +41,17 @@
             this.btnAdicionarItem = new System.Windows.Forms.Button();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblValor = new System.Windows.Forms.Label();
-            this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.btnBuscarProduto = new System.Windows.Forms.Button();
             this.txtProduto = new System.Windows.Forms.TextBox();
             this.lblProduto = new System.Windows.Forms.Label();
+            this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
             this.groupCampos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errError)).BeginInit();
             this.groupPedido.SuspendLayout();
             this.groupItem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
             this.SuspendLayout();
             // 
             // groupCampos
@@ -141,12 +142,12 @@
             // 
             // groupItem
             // 
+            this.groupItem.Controls.Add(this.txtQuantidade);
             this.groupItem.Controls.Add(this.gridItem);
             this.groupItem.Controls.Add(this.btnRemover);
             this.groupItem.Controls.Add(this.btnAdicionarItem);
             this.groupItem.Controls.Add(this.txtValor);
             this.groupItem.Controls.Add(this.lblValor);
-            this.groupItem.Controls.Add(this.txtQuantidade);
             this.groupItem.Controls.Add(this.lblQuantidade);
             this.groupItem.Controls.Add(this.btnBuscarProduto);
             this.groupItem.Controls.Add(this.txtProduto);
@@ -203,14 +204,6 @@
             this.lblValor.TabIndex = 5;
             this.lblValor.Text = "Valor:";
             // 
-            // txtQuantidade
-            // 
-            this.txtQuantidade.Location = new System.Drawing.Point(76, 55);
-            this.txtQuantidade.MaxLength = 5;
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantidade.TabIndex = 4;
-            // 
             // lblQuantidade
             // 
             this.lblQuantidade.AutoSize = true;
@@ -247,6 +240,13 @@
             this.lblProduto.TabIndex = 0;
             this.lblProduto.Text = "Produto:";
             // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.Location = new System.Drawing.Point(79, 55);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(100, 20);
+            this.txtQuantidade.TabIndex = 10;
+            // 
             // FormPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +259,7 @@
             this.groupItem.ResumeLayout(false);
             this.groupItem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,7 +273,6 @@
         private System.Windows.Forms.GroupBox groupItem;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label lblValor;
-        private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.Button btnBuscarProduto;
         private System.Windows.Forms.TextBox txtProduto;
@@ -283,5 +283,6 @@
         private System.Windows.Forms.DataGridView gridItem;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnAdicionarItem;
+        private System.Windows.Forms.NumericUpDown txtQuantidade;
     }
 }

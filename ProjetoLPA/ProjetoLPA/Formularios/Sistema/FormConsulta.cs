@@ -29,6 +29,15 @@ namespace ProjetoLPA.Formularios.Sistema
             set { rowCodigo = value; }
         }
 
+        private int quantidade;
+
+        public int Quantidade
+        {
+            get { return quantidade; }
+            set { quantidade = value; }
+        }
+
+
         private string rowDescricao;
 
         public string Descricao
@@ -39,16 +48,17 @@ namespace ProjetoLPA.Formularios.Sistema
 
         public FormConsulta()
         {
-            InitializeComponent();
-            CarregaDataGrid();
+            InitializeComponent();            
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             //Herdado
         }
-        private void CarregaDataGrid()
+        public void CarregaDataGrid()
         {
+            dataGrid.DataSource = null;
+
             if (tipo == ClnFuncoesGerais.TipoConsulta.Cliente)
             {
                 ClnCliente cliente = new ClnCliente();
@@ -56,8 +66,8 @@ namespace ProjetoLPA.Formularios.Sistema
             }
             else if (tipo == ClnFuncoesGerais.TipoConsulta.Produto)
             {
-                ClnProduto cliente = new ClnProduto();
-                dataGrid.DataSource = cliente.Listar(txtDescricao.Text).Tables[0];
+                ClnProduto produto = new ClnProduto();
+                dataGrid.DataSource = produto.Listar(txtDescricao.Text).Tables[0];
             }
         }
 
@@ -70,6 +80,11 @@ namespace ProjetoLPA.Formularios.Sistema
         {
             Codigo = (int)dataGrid.CurrentRow.Cells[0].Value;
             Descricao = (string)dataGrid.CurrentRow.Cells[1].Value;
+
+            if (tipo == ClnFuncoesGerais.TipoConsulta.Produto)
+            {
+                quantidade = int.Parse(dataGrid.CurrentRow.Cells[2].Value.ToString());
+            }
             this.Close();
         }
     }

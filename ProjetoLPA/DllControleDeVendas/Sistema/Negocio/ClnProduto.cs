@@ -80,7 +80,7 @@ namespace DllControleDeVendas.Sistema.Negocio
         {
             StringBuilder query = new StringBuilder();
             query.Append("  DELETE FROM Produto");
-            query.Append("  WHERE PRO_ID = " + pro_ID);
+            query.Append("  WHERE PRO_ID = " + codigo);
             cldBancoDados.ExecutaComando(query.ToString());
         }
 
